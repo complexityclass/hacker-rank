@@ -1,0 +1,47 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-22 19:43:49.809029 UTC
+
+interface hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0:StringMingling 8002
+  interface hash: ce397cbc4133a507139e134b4d244c0f
+  ABI hash: 464eb0fed693b631173e95d362058b10
+  export-list hash: 6bd1fba86f2fed3479195dd9150e8949
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  StringMingling.mingle
+  StringMingling.mingleFast
+  StringMingling.stringOpermute
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+78fe6f4de8254206d3e173379422f38d
+  $trModule :: GHC.Types.Module
+41f5b7e149e3e411cb27c7e34550b1a9
+  mingle :: GHC.Base.String -> GHC.Base.String -> GHC.Base.String
+270112d3f5b9979bc13776ff1a13bd5f
+  mingleFast :: GHC.Base.String -> GHC.Base.String -> GHC.Base.String
+1e9b928513348e679c4d2c649f87a7f6
+  stringOpermute :: GHC.Base.String -> GHC.Base.String
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

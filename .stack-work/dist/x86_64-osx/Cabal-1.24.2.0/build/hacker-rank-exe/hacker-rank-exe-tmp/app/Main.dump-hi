@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-08-19 12:32:42.020475 UTC
+2017-08-22 19:43:50.256517 UTC
 
 interface main@main:Main 8002
-  interface hash: 8ab6ef4858ee4f7a94fa295c7b8ec52c
-  ABI hash: d75d673ae2d4589ee126acdc27aa8a11
+  interface hash: 9beb4fc084eb83aac68cae64097e6502
+  ABI hash: afd17b53997fb3e27e78b6c04e72c28d
   export-list hash: 6dec531c7c806d9cd59858931e4ac445
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 81707317698767669a2e208644d49337
@@ -27,86 +27,11 @@ import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.IO c9de64c5f5407c4cf1c52500c4d15200
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  hacker-rank-0.1.0.0@hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0:Lib f1e64d9cf60a706cba1cb7615fbdc6c2
-import  -/  hacker-rank-0.1.0.0@hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0:MathLib 801733b1d5e69db7dec493ae84a987ec
-d6831ef04cb9301b090dfae6f7bb7ec7
+import  -/  hacker-rank-0.1.0.0@hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0:StringMingling 464eb0fed693b631173e95d362058b10
+83f529351410271e83fed952c86159e1
   $trModule :: GHC.Types.Module
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
-847d9fc3b8e6f0b424199f36b4999bb2
-  $trModule1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "Main"#) -}
-24ef6042833e75ffd7aa98b83ecca98d
-  $trModule2 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "main"#) -}
-acb909166ae373c3c7798245411cb8d3
+0d166822e21f7182ece26123ea2cf341
   main :: GHC.Types.IO ()
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-8fc1f20a2b878a1afe73cf488ac4479b
-  main1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        Lib.someFunc2
-                        GHC.Types.True
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        Main.main3
-                        GHC.Types.True
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   Main.main2
-                   GHC.Types.True
-                   ipv2 } }) -}
-0725c6217235bfc67a58dbaf568b32f4
-  main2 :: GHC.Base.String
-  {- Unfolding: (case GHC.Show.$wshowSignedInt
-                        0#
-                        9#
-                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
-                 GHC.Types.: @ GHC.Types.Char ww5 ww6 }) -}
-f8e398fb5a3bf1677fc5522f03475a22
-  main3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.Types.:
-                   @ GHC.Types.Char
-                   GHC.Show.shows6
-                   Main.main4) -}
-8c69b135f7e8c00243423f47c729cf71
-  main4 :: GHC.Base.String
-  {- Unfolding: (GHC.Show.showLitString Main.main6 Main.main5) -}
-4b4dd38f72ace1bdaa04e6af6ac25aac
-  main5 :: [GHC.Types.Char]
-  {- HasNoCafRefs,
-     Unfolding: (GHC.Types.:
-                   @ GHC.Types.Char
-                   GHC.Show.shows6
-                   (GHC.Types.[] @ GHC.Types.Char)) -}
-118a9d08cea2fb130532dcbddd01b4ea
-  main6 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackAppendCString#
-                   "Yo "#
-                   Main.main7) -}
-31191b99a8c50b9c88eed6a41c8bbf89
-  main7 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackAppendCString#
-                   "Haskellers"#
-                   Lib.sayYo1) -}
-80c14974c885be647e4545fd5063f462
-  main8 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1,
-     Unfolding: (GHC.TopHandler.runMainIO1
-                   @ ()
-                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

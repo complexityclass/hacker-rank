@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-08-19 12:11:43.54102 UTC
+2017-08-22 19:44:18.329151 UTC
 
 interface main@main:Main 8002
-  interface hash: 9eced06d3278b694e87fc6601c3d5ecf
-  ABI hash: bc8dd3a0705f8287b2d1324e63d0e9af
-  export-list hash: 177fa82564a5da90ba167f1faafd73dc
+  interface hash: 33629ada417b34c75d8f64e232a66bac
+  ABI hash: 7c96edf11dd9a13d209eaa45d6a63180
+  export-list hash: 7780a160796d6662ec2ace8d0a050095
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 487a2b9f02429dad4f013a03c200eeef
   sig of: Nothing
@@ -14,7 +14,10 @@ interface main@main:Main 8002
 exports:
   Main.add5Test
   Main.main
+  Main.mingleFastTest
+  Main.mingleTest
   Main.sayYoTest
+  Main.stringOpermuteTest
 module dependencies:
 package dependencies: ansi-terminal-0.6.3.1@ansi-terminal-0.6.3.1-3RTqikoQf47ajVD9m8zgB
                       ansi-wl-pprint-0.6.7.3@ansi-wl-pprint-0.6.7.3-A79v826bgPr574HtaZPPqC
@@ -73,8 +76,9 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  hacker-rank-0.1.0.0@hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0:Lib 207f5153f177c119540669109e6071a2
+import  -/  hacker-rank-0.1.0.0@hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0:Lib f1e64d9cf60a706cba1cb7615fbdc6c2
 import  -/  hacker-rank-0.1.0.0@hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0:MathLib 801733b1d5e69db7dec493ae84a987ec
+import  -/  hacker-rank-0.1.0.0@hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0:StringMingling 464eb0fed693b631173e95d362058b10
 import  -/  tasty-0.11.2.5@tasty-0.11.2.5-9CHOVHcPPPS3fAInAil5pA:Test.Tasty 15dafa11fe8e747610e0587fe556c1c0
 import  -/  tasty-0.11.2.5@tasty-0.11.2.5-9CHOVHcPPPS3fAInAil5pA:Test.Tasty.Core a2a223965f493ea4185b94a827cf616c
 import  -/  tasty-hunit-0.9.2@tasty-hunit-0.9.2-8EqOuwvMdXe8awhjhOAP3F:Test.Tasty.HUnit 96627a165514407e616de370ec090116
@@ -128,12 +132,12 @@ b7e6e1b672b310c18dd483977d00fa71
 d5c37c0b817ec78e4c29dceb1dcc7744
   add5Test4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Testing add5"#) -}
-121198a6538c1634d99636d427a9c79d
+039ebccd367a264ce41837ef8278324d
   main :: GHC.Types.IO ()
   {- Arity: 1,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-76dc31432f19e41f9eff078f1a2a94a7
+838b6c497206086217204291976020a8
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -141,35 +145,139 @@ d5c37c0b817ec78e4c29dceb1dcc7744
      Unfolding: (Test.Tasty.CmdLine.defaultMainWithIngredients1
                    Test.Tasty.defaultIngredients
                    Main.main2) -}
-d8c89e487f62c09eefad1369503f5f0d
+740470b813a4fa2eb997edeb1e708b78
   main2 :: Test.Tasty.Core.TestTree
   {- Strictness: m2,
-     Unfolding: (Test.Tasty.Core.TestGroup Main.main5 Main.main3) -}
-eef3be33c30835404407a56412f1a67f
+     Unfolding: (Test.Tasty.Core.TestGroup Main.main8 Main.main3) -}
+9c11335d5dc01a82c5ec2eda9cd93c24
   main3 :: [Test.Tasty.Core.TestTree]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Test.Tasty.Core.TestTree
                    Main.sayYoTest
                    Main.main4) -}
-711bb6509946a3b3728572b880a6553b
+0f191ef262de29536d9a4e0a5b2d3a5a
   main4 :: [Test.Tasty.Core.TestTree]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Test.Tasty.Core.TestTree
                    Main.add5Test
+                   Main.main5) -}
+eb9409d950cc01c26687661bf6d665ba
+  main5 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.mingleTest
+                   Main.main6) -}
+d050b0ec743f5882a9002ebe8c8832f1
+  main6 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.mingleFastTest
+                   Main.main7) -}
+b8f461cd3f0123bf2c02e62b85d3a046
+  main7 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.stringOpermuteTest
                    (GHC.Types.[] @ Test.Tasty.Core.TestTree)) -}
-5433b684322bfe070471eb9fa6eed5bb
-  main5 :: [GHC.Types.Char]
+8aca375ff3f68ab06b7b22eb75baafdb
+  main8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Our Library Tests"#) -}
-ea6a6fe4466fe64ad874a0b722ebdd32
-  main6 ::
+cc138ee953a8816a5c65f42c4045e084
+  main9 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+955f55132fdaeffcd40fed30f823136b
+  mingleFastTest :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.HUnit.TestCase
+                   Test.Tasty.HUnit.$fIsTestTestCase
+                   Main.mingleFastTest7
+                   Main.mingleFastTest1
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.N:IO[0] <[GHC.Types.Char]>_R))
+                        (Sym (Test.Tasty.HUnit.N:TestCase[0])))) -}
+b30ec3a7d9adca5f691acf49b4217a4c
+  mingleFastTest1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta1 :: GHC.Prim.State#
+                              GHC.Prim.RealWorld)[OneShot] ->
+                 case Test.Tasty.HUnit.Orig.@=?2
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fEq[]_$s$fEq[]1
+                        GHC.Show.$fShow[]_$s$fShow[]1
+                        Main.mingleFastTest6
+                        Main.mingleFastTest5
+                        Main.mingleFastTest2
+                        eta1 of ds { (#,#) ipv ipv1 ->
+                 (# ipv, GHC.Types.[] @ GHC.Types.Char #) }) -}
+0d79674776899752da4d71232c007cf5
+  mingleFastTest2 :: GHC.Base.String
+  {- Unfolding: (StringMingling.mingleFast
+                   Main.mingleFastTest4
+                   Main.mingleFastTest3) -}
+66ee581afa59de971bb0ade694595bd7
+  mingleFastTest3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "pqrst"#) -}
+383e6b6bb0ef0c116130f46b93f70dfb
+  mingleFastTest4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "abcde"#) -}
+e9f0911254c16eae6537766f45631432
+  mingleFastTest5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "apbqcrdset"#) -}
+b6ae953e5fc31152cde810752db8668d
+  mingleFastTest6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Should mingle abcde pqrst"#) -}
+b4af6d0b840067a6d3ddbf36d46db581
+  mingleFastTest7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Testing mingleFast"#) -}
+58b584e4f3ef49a23e29a7eef28538be
+  mingleTest :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.HUnit.TestCase
+                   Test.Tasty.HUnit.$fIsTestTestCase
+                   Main.mingleTest3
+                   Main.mingleTest1
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.N:IO[0] <[GHC.Types.Char]>_R))
+                        (Sym (Test.Tasty.HUnit.N:TestCase[0])))) -}
+32281df18e089125605e1ef7d8fa099d
+  mingleTest1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta1 :: GHC.Prim.State#
+                              GHC.Prim.RealWorld)[OneShot] ->
+                 case Test.Tasty.HUnit.Orig.@=?2
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fEq[]_$s$fEq[]1
+                        GHC.Show.$fShow[]_$s$fShow[]1
+                        Main.mingleFastTest6
+                        Main.mingleFastTest5
+                        Main.mingleTest2
+                        eta1 of ds { (#,#) ipv ipv1 ->
+                 (# ipv, GHC.Types.[] @ GHC.Types.Char #) }) -}
+171866bd57b87ee145bfb2a71d3305c3
+  mingleTest2 :: GHC.Base.String
+  {- Unfolding: (StringMingling.mingle
+                   Main.mingleFastTest4
+                   Main.mingleFastTest3) -}
+ec028ad588a653f74391a8846d293dfb
+  mingleTest3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Testing mingle"#) -}
 66b717b62f773742574d89d54d256fbb
   sayYoTest :: Test.Tasty.Core.TestTree
   {- Unfolding: (Test.Tasty.Core.SingleTest
@@ -217,6 +325,51 @@ bf35047b82e553173b6716e83d15d5b2
 3a3d309e3a5d57de5ab4150f3769b555
   sayYoTest6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Testing SayYo"#) -}
+d8c864f7adf8c1e90453a05057705c14
+  stringOpermuteTest :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.HUnit.TestCase
+                   Test.Tasty.HUnit.$fIsTestTestCase
+                   Main.stringOpermuteTest6
+                   Main.stringOpermuteTest1
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.N:IO[0] <[GHC.Types.Char]>_R))
+                        (Sym (Test.Tasty.HUnit.N:TestCase[0])))) -}
+a2756fc086d0bb7c53ec16d336ff2e61
+  stringOpermuteTest1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta1 :: GHC.Prim.State#
+                              GHC.Prim.RealWorld)[OneShot] ->
+                 case Test.Tasty.HUnit.Orig.@=?2
+                        @ [GHC.Types.Char]
+                        GHC.Classes.$fEq[]_$s$fEq[]1
+                        GHC.Show.$fShow[]_$s$fShow[]1
+                        Main.stringOpermuteTest5
+                        Main.stringOpermuteTest4
+                        Main.stringOpermuteTest2
+                        eta1 of ds { (#,#) ipv ipv1 ->
+                 (# ipv, GHC.Types.[] @ GHC.Types.Char #) }) -}
+51dec49c942af5a0b97fcf26082f60d7
+  stringOpermuteTest2 :: GHC.Base.String
+  {- Unfolding: (StringMingling.stringOpermute
+                   Main.stringOpermuteTest3) -}
+543927909b33ab378a04c6f6c38ecc19
+  stringOpermuteTest3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "abcdpqrs"#) -}
+8f08d25820757eb22066a27d6fa03ab4
+  stringOpermuteTest4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "badcqpsr"#) -}
+88d2bd007867f53871f5b8fd2954e72a
+  stringOpermuteTest5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Should replace i and i + 1 in abcdpqrs"#) -}
+3013d7ba1a641318d2710a08ae9bb4c0
+  stringOpermuteTest6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Testing stringOpermute"#) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
