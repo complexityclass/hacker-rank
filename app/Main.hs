@@ -1,10 +1,18 @@
 module Main where
 
 import Lib
-import MathLib
+import StringMingling
+import Control.Monad
+
+getInt :: IO Int
+getInt = do
+  s <- getLine
+  return (read s)
 
 main :: IO ()
 main = do
-  someFunc
-  print (sayYo "Haskellers")
-  print (add5 4)
+  n <- getInt
+  inputStrings <- replicateM n getLine
+  mapM_ (putStrLn . stringOpermute) inputStrings 
+  
+    
