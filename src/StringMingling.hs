@@ -14,5 +14,5 @@ mingleFast st1 st2 = concat $ zipWith (\a b -> [a,b]) st1 st2
 
 stringOpermute :: String -> String
 stringOpermute [] = []
-stringOpermute (x:y:[]) = (y:x:[])
+stringOpermute (x:[]) = (x:[])
 stringOpermute (x:s:xs) = (s:x:(stringOpermute xs))

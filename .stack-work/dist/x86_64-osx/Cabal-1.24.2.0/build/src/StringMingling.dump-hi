@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-08-22 19:43:49.809029 UTC
+2017-08-27 13:37:59.668011 UTC
 
 interface hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0:StringMingling 8002
-  interface hash: ce397cbc4133a507139e134b4d244c0f
-  ABI hash: 464eb0fed693b631173e95d362058b10
+  interface hash: acc9f28bfe1c06abb93421efd4c3ba08
+  ABI hash: aff7b39745008f31d7af11f4d07eb1b0
   export-list hash: 6bd1fba86f2fed3479195dd9150e8949
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: f6624f22fcdd76ed0ac6625466e2d712
@@ -29,14 +29,46 @@ import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
-78fe6f4de8254206d3e173379422f38d
+af2731b72c0974f53c3d0bd3666f2ece
   $trModule :: GHC.Types.Module
-41f5b7e149e3e411cb27c7e34550b1a9
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   StringMingling.$trModule2
+                   StringMingling.$trModule1) -}
+44e4a4573932e84026dcf099d5331232
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "StringMingling"#) -}
+0041cf4a1e973780a306bdbfdd024bcc
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hacker-rank-0.1.0.0-GjpRxb8iNAQ3hTKyQdsJV0"#) -}
+d7cac56f8e1b518d12fed76fd0e3be15
   mingle :: GHC.Base.String -> GHC.Base.String -> GHC.Base.String
-270112d3f5b9979bc13776ff1a13bd5f
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ (st1 :: GHC.Base.String) (st2 :: GHC.Base.String) ->
+                 StringMingling.mingle_go
+                   st1
+                   st2
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+a8c0e6e7b7f5739e782aaaa3922d55ba
   mingleFast :: GHC.Base.String -> GHC.Base.String -> GHC.Base.String
-1e9b928513348e679c4d2c649f87a7f6
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ (st1 :: GHC.Base.String) (st2 :: GHC.Base.String) ->
+                 StringMingling.mingleFast_go st1 st2) -}
+50f1503239ecbc9b25672bb089474f18
+  mingleFast_go ::
+    [GHC.Types.Char] -> [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+09f23318005e9cabc6320a2aecb270d5
+  mingle_go ::
+    [GHC.Types.Char]
+    -> [GHC.Types.Char] -> [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*U><L,1*U><S,1*U> -}
+79c8e66873f994e9e24dcc44207ed207
   stringOpermute :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
