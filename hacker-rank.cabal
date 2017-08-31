@@ -16,9 +16,11 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
                      , src/MathLibDir
+                     , src/DataStructures
   exposed-modules:     Lib
                      , MathLib
                      , StringMingling
+                     , ArraysProblems
   build-depends:       base >= 4.7 && < 5
   default-language:    Haskell2010
 
