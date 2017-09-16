@@ -7,10 +7,12 @@ import Lib
 import MathLib
 import StringMingling
 import ArraysProblems
+import Queue
 
 main :: IO ()
 main = do
-  defaultMain (testGroup "Our Library Tests" [sayYoTest, add5Test, mingleTest, mingleFastTest, stringOpermuteTest, leftRotationTest])
+  defaultMain (testGroup "Our Library Tests" 
+               [sayYoTest, add5Test, mingleTest, mingleFastTest, stringOpermuteTest])
 
 sayYoTest :: TestTree
 sayYoTest = testCase "Testing SayYo"
