@@ -12,7 +12,8 @@ import Queue
 main :: IO ()
 main = do
   defaultMain (testGroup "Our Library Tests" 
-               [sayYoTest, add5Test, mingleTest, mingleFastTest, stringOpermuteTest])
+               [sayYoTest, add5Test, mingleTest, 
+                mingleFastTest, stringOpermuteTest, leftRotationTest])
 
 sayYoTest :: TestTree
 sayYoTest = testCase "Testing SayYo"
@@ -36,4 +37,4 @@ stringOpermuteTest = testCase "Testing stringOpermute"
 
 leftRotationTest :: TestTree
 leftRotationTest = testCase "Testing left rotation"
-  (assertEqual "Shoud rotate array [1,2,3] 2 times" [3,2,1] (leftRotation 2 [1,2,3]))
+  (assertEqual "Shoud rotate array [1,2,3] 1 times" [3,1,2] (leftRotation 1 [1,2,3]))

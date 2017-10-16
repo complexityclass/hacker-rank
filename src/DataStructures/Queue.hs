@@ -2,7 +2,8 @@ module Queue
   ( Queue(..),
     push,
     pop,
-    peek
+    peek,
+    toArray
   ) where
 
 data Queue a = Queue [a] deriving (Show, Eq)
@@ -15,4 +16,7 @@ pop (Queue xs) = (head xs, Queue $ tail xs)
 
 peek :: Queue a -> a
 peek (Queue (x:_)) = x
+
+toArray :: Queue a -> [a]
+toArray (Queue es) = es
 
