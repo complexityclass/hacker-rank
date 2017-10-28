@@ -13,6 +13,6 @@ main :: IO ()
 main = do
   n <- getInt
   inputStrings <- replicateM n getLine
-  mapM_ (putStrLn . stringOpermute) inputStrings 
+  mapM_ (putStrLn . stringOpermute) inputStrings
   
     
