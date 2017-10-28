@@ -6,10 +6,14 @@ import Test.Tasty.HUnit
 import Lib
 import MathLib
 import StringMingling
+import ArraysProblems
+import Queue
 
 main :: IO ()
 main = do
-  defaultMain (testGroup "Our Library Tests" [sayYoTest, add5Test, mingleTest, mingleFastTest, stringOpermuteTest])
+  defaultMain (testGroup "Our Library Tests" 
+               [sayYoTest, add5Test, mingleTest, 
+                mingleFastTest, stringOpermuteTest, leftRotationTest])
 
 sayYoTest :: TestTree
 sayYoTest = testCase "Testing SayYo"
@@ -30,3 +34,7 @@ mingleFastTest = testCase "Testing mingleFast"
 stringOpermuteTest :: TestTree
 stringOpermuteTest = testCase "Testing stringOpermute"
   (assertEqual "Should replace i and i + 1 in abcdpqrs" "badcqpsr" (stringOpermute "abcdpqrs"))
+
+leftRotationTest :: TestTree
+leftRotationTest = testCase "Testing left rotation"
+  (assertEqual "Shoud rotate array [1,2,3] 1 times" [3,1,2] (leftRotation 1 [1,2,3]))
