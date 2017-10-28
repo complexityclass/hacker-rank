@@ -37,4 +37,4 @@ stringOpermuteTest = testCase "Testing stringOpermute"
 
 leftRotationTest :: TestTree
 leftRotationTest = testCase "Testing left rotation"
-  (assertEqual "Shoud rotate array [1,2,3] 1 times" [3,1,2] (leftRotation 1 [1,2,3]))
+  (assertEqual "Shoud rotate array [1,2,3,4,5] 4 times" [5,1,2,3,4] (leftRotation 4 [1,2,3,4,5]))

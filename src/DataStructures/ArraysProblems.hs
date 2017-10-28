@@ -5,9 +5,9 @@ module ArraysProblems
 import Control.Monad
 import Deque
 
-iteration :: Integer -> Deque Integer -> Deque Integer
+iteration :: Int -> Deque Int -> Deque Int
 iteration 0 deque = deque
-iteration n deque = iteration (n - 1) (pushHead (peekTail deque) (snd (popTail deque)))
+iteration n deque = iteration (n - 1) (pushTail (peekHead deque) (snd (popHead deque)))
 
-leftRotation :: Integer -> [Integer] -> [Integer]
+leftRotation :: Int -> [Int] -> [Int]
 leftRotation n arr = toArray (iteration n (Deque arr))
